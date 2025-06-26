@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pulga Store</title>
     <link rel="stylesheet" href="index.css">
-    <script src="hora.js" defer></script>
+    
 </head>
 <body>
     <header>
@@ -21,13 +21,37 @@
         </section>
         <aside>
             <h2>Productos principales</h2>
-            <figure>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEdKgoolQ0vnSOcJaIEL1-6YQ37S42-S5XFg&s" alt="kit esencial D&D">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtz4SB4v35KD7ipT2g61smmJAyyxcfRgSNWQ&s" alt="Kit de heroes">
-                <img src="https://cdnx.jumpseller.com/magic4ever/image/26509491/resize/1200/1200?1665083784" alt="Figura Ice Troll">
-            </figure>
+            <div>
+                <figure>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEdKgoolQ0vnSOcJaIEL1-6YQ37S42-S5XFg&s" alt="kit esencial D&D">
+                    <button class="comprar">Comprar</button>
+                </figure>
+                <figure>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtz4SB4v35KD7ipT2g61smmJAyyxcfRgSNWQ&s" alt="Kit de heroes">
+                    <button class="comprar">Comprar</button>
+                </figure>
+                <figure>
+                    <img src="https://cdnx.jumpseller.com/magic4ever/image/26509491/resize/1200/1200?1665083784" alt="Figura Ice Troll">
+                    <button class="comprar">Comprar</button>
+                </figure>
+                <dialog id="alert-dialog">
+                    <h3>Gracias por comprar</h3>
+                    <form>
+                        <button formmethod="dialog">Seguir Comprando</button>
+                    </form>
+                </dialog>
+            </div>
         </aside>
     </main>
     <footer>Fundador Farolo  2025</footer>
+    <script>
+    const buyButtons = document.querySelectorAll(".comprar");
+    const alertDialog = document.querySelector("#alert-dialog");
+    buyButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            alertDialog.showModal();
+        });
+    });
+</script>
 </body>
 </html>

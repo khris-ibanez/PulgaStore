@@ -32,7 +32,7 @@ main aside h2{
     text-align: center;
 }
 
-main aside figure{
+main aside div {
     padding: 2%;
     display: flex;
     flex-wrap: wrap;
@@ -40,7 +40,7 @@ main aside figure{
     gap: 1rem;
 }
 
-main aside figure img {
+main aside div figure img {
     padding: 4%;
     border-radius: 30%;
     max-width: 10vw;
@@ -51,6 +51,27 @@ footer {
     padding: 1rem;
 }
 
+
+dialog {
+    padding: 2rem;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+dialog[open] {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
 /* ======== MEDIA QUERIES ======== */
 
 /* Móviles (pantallas pequeñas hasta 600px) */
@@ -59,7 +80,7 @@ footer {
         padding: 3%;
     }
 
-    main aside figure img {
+    main aside div figure img {
         max-width: 100px;
     }
 
@@ -76,7 +97,7 @@ footer {
         padding: 4%;
     }
 
-    main aside figure img {
+    main aside div figure img {
         max-width: 25vw;
     }
 
@@ -87,7 +108,7 @@ footer {
 
 /* Escritorio (más de 1024px) */
 @media (min-width: 1025px) {
-    main aside figure img {
+    main aside div figure img {
         max-width: 10vw;
     }
 
