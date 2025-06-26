@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+}
+header{
+    color: blue;
+    background-color: brown;
+    padding: 3%;
+    & nav{
+        color:yellowgreen;
+        text-align:center;
+    }
+}
+footer{
+    text-align: center;
+}
